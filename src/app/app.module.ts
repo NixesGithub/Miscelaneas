@@ -6,6 +6,8 @@ import { NgStylesComponent } from './components/ng-styles/ng-styles.component';
 import { CssComponent } from './components/css/css.component';
 import { ClasesComponent } from './components/clases/clases.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { ResaltadoDirective } from './directivas/resaltado.directive';
+import { GirarDirective } from './directivas/girar.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { LoadingComponent } from './components/loading/loading.component';
     NgStylesComponent,
     CssComponent,
     ClasesComponent,
-    LoadingComponent
+    LoadingComponent,
+    ResaltadoDirective,
+    GirarDirective
   ],
   imports: [
     BrowserModule
