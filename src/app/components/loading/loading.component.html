@@ -1,0 +1,5 @@
+<button (click)="ejecutar()" class="btn btn-primary " type="button" [disabled]= "loading">
+    <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading}" class="fa"></i>
+    <span *ngIf="loading"> guardando...  </span>
+    <span *ngIf="!loading"> Guardar </span>
+    </button>

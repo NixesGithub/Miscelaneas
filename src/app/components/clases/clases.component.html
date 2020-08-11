@@ -1,0 +1,25 @@
+<div [ngClass]="alerta" class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+</div>
+
+Tenemos alert, btn y text combinables con success, danger y info
+
+<button type="button" class="btn btn-info" (click)="alerta = 'alert-info'"> alert-info</button>
+<button type="button" class="btn btn-success" (click)="alerta = 'alert-success'">alert-success</button>
+<button type="button" class="btn btn-danger" (click)="alerta = 'alert-danger'">alert-danger</button>
+
+<!-- decimos que la calse text-danger sea true y se aplique (idem que => class="text-danger") -->
+<h3 [ngClass]="{'text-danger' : true}">esto es un text-danger</h3>
+
+<!-- ahora lo encapsulamos en una variable -->
+<h3 [ngClass]="{'text-success' : clase}">esto es un text-success</h3>
+
+<button type="button" class="btn btn-success" (click)="clase = !clase" > cambiar color texto a verde (cambiar clase)</button>
+
+<hr>
+
+<div [ngClass]="{'alert-info' : obj.info, 'alert-danger' : ! obj.info  }" class="alert alert-primary" role="alert">
+    Controlar la clase desde la propiedad de un objeto
+    <button type="button" (click)="obj.info = ! obj.info" class="btn btn-info"> controlar</button>
+</div>
+
